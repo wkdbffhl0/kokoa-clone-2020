@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 35px 35px 25px 35px;
+  margin-bottom: 15px;
 }
 
 .screen-header__title {
@@ -12,4 +13,18 @@
 
 .screen-header__icons span {
   margin-left: 20px;
+}
+
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.fa-cog:hover {
+  will-change: transform;
+  animation: rotateCog 0.4s linear infinite;
 }
